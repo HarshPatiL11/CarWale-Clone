@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const jobSchema = mongoose.Schema({
+const usedCity = mongoose.Schema({
     cityHeader: {
         type: String,
         require: true
@@ -11,4 +11,4 @@ const jobSchema = mongoose.Schema({
     
 }, { timestamps: true });
 
-export default mongoose.model("Job", jobSchema);
+export default mongoose.model("usedCity", usedCity);

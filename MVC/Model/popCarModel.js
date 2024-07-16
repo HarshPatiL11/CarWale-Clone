@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const jobSchema = mongoose.Schema({
+const popCar = mongoose.Schema({
     popHeader: {
         type: String,
         require: true
@@ -8,4 +8,4 @@ const jobSchema = mongoose.Schema({
     linkText: []
 }, { timestamps: true });
 
-export default mongoose.model("Job", jobSchema);
+export default mongoose.model("PopCar", popCar);

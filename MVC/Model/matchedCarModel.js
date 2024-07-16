@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const jobSchema = mongoose.Schema({
+const matchedcar = mongoose.Schema({
     img: {
         type: String,
     },
@@ -16,11 +16,10 @@ const jobSchema = mongoose.Schema({
         type: Number,
         require: true
     },
-    price: {
+    distance: {
         type: String,
         require: true
     }
     
 }, { timestamps: true });
-
-export default mongoose.model("Job", jobSchema);
+export default mongoose.model("matchedCar", matchedcar);
