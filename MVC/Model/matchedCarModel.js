@@ -1,16 +1,24 @@
 import mongoose from "mongoose";
 
 const jobSchema = mongoose.Schema({
-    mainHeader: {
+    img: {
+        type: String,
+    },
+    description: {
         type: String,
         require: true
     },
-    subHeader: {
-        type: String,
+    price: {
+        type: Number,
         require: true
     },
-    homeImg: {
+    year: {
+        type: Number,
+        require: true
+    },
+    price: {
         type: String,
+        require: true
     }
     
 }, { timestamps: true });
