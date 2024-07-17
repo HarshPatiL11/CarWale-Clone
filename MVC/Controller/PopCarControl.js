@@ -1,7 +1,7 @@
 import popCarModel from "../Model/popCarModel";
 
 // create popular cars for pop cars page
-export const createPopCars = async(req,res)=>{
+export const newPopCars = async(req,res)=>{
 
     try {
         const  {popHeader,linkText} = req.body;
@@ -12,11 +12,11 @@ export const createPopCars = async(req,res)=>{
                 return res.status(400).send("all Home data req".bgYellow)
         }
         // add Home
-        const newPopCars = await popCarModel.create({
+        const createPopCars = await popCarModel.create({
             popHeader,linkText
         })
         console.log("newPopCars added successfully".bgGreen.white);        
-        return res.status(201).send({ message: 'newPopCars added successfully'.bgGreen,  newPopCars });
+        return res.status(201).send({ message: 'newPopCars added successfully'.bgGreen,  createPopCars });
     } catch (error) {
         console.log(`Api error ${error}`);
         return res.status(500).send("Internal Server Error".bgRed);

@@ -1,6 +1,6 @@
 import usedCityModel from '../Model/usedCityModel.js'
 // create Cities for used Cities page
-export const createCities = async(req,res)=>{
+export const newCities = async(req,res)=>{
 
     try {
         const  {cityHeader,cityImg} = req.body;
@@ -11,11 +11,11 @@ export const createCities = async(req,res)=>{
                 return res.status(400).send("all Home data req")
         }
         // add Home
-        const newCities = await usedCityModel.create({
+        const createCities = await usedCityModel.create({
             cityHeader,cityImg
         })
         console.log("Cities added successfully".bgGreen.white);        
-        return res.status(201).send({ message: 'Cities added successfully'.bgGreen,  newCities });
+        return res.status(201).send({ message: 'Cities added successfully'.bgGreen,  createCities });
     } catch (error) {
         console.log(`Api error ${error}`);
         return res.status(500).send("Internal Server Error".bgRed);

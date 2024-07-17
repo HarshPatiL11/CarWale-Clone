@@ -2,7 +2,7 @@ import matchedCarModel from "../Model/matchedCarModel";
 
 
 // create Matched cars for Matched cars page
-export const createMatchedCars = async(req,res)=>{
+export const newMatchedCars = async(req,res)=>{
 
     try {
         const  {  img,description,price,year,distance } = req.body;
@@ -16,11 +16,11 @@ export const createMatchedCars = async(req,res)=>{
                 return res.status(400).send("all Matched data req".bgYellow)
         }
         // add Home
-        const newMatchedCars = await matchedCarModel.create({
+        const createMatchedCars = await matchedCarModel.create({
             img,description,price,year,distance
         })
         console.log("newMatchedCars added successfully".bgGreen.white);        
-        return res.status(201).send({ message: 'newMatchedCars added successfully'.bgGreen,  newMatchedCars });
+        return res.status(201).send({ message: 'newMatchedCars added successfully'.bgGreen,  createMatchedCars });
     } catch (error) {
         console.log(`Api error ${error}`);
         return res.status(500).send("Internal Server Error".bgRed);
