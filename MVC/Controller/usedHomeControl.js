@@ -1,4 +1,4 @@
-import usedHomeModel from "../Model/usedHomeModel";
+import usedHomeModel from "../Model/usedHomeModel.js";
 
 // create home or used cars page
 export const newHome = async(req,res)=>{

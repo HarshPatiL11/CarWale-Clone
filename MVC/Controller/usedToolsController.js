@@ -1,4 +1,4 @@
-import usedToolsModel from "../Model/usedToolsModel";
+import usedToolsModel from "../Model/usedToolsModel.js";
 
 export const newTools = async (req,res)=>{
     try {

@@ -1,4 +1,4 @@
-import matchedCarModel from "../Model/matchedCarModel";
+import matchedCarModel from "../Model/matchedCarModel.js";
 
 
 // create Matched cars for Matched cars page

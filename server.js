@@ -3,7 +3,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import {connectDb} from "./DB/db.js";
-// import {router} from './MVC/Routes/route.js';
+import router from './MVC/Routes/route.js';
 
 // config env file
 dotenv.config();
@@ -21,11 +21,16 @@ app.use(express.json());
 connectDb();
 
 // router
+
+
 app.get('/',(req,res)=>{
     res.send({
         message:'hello DcodeTech'
     })
 })
+
+// api routing
+app.use('/api/v1/',router)
 
 // app.use('/api/v1/',router);
 app.listen(PORT,()=>{

@@ -1,4 +1,4 @@
-import popCarModel from "../Model/popCarModel";
+import popCarModel from "../Model/popCarModel.js";
 
 // create popular cars for pop cars page
 export const newPopCars = async(req,res)=>{

@@ -1,9 +1,9 @@
 import express from "express";
-import { getHome, newHome } from "../Controller/usedHomeControl";
-import { getTools, newTools } from "../Controller/usedToolsController";
-import { newCities,getCities } from "../Controller/usedCityControl";
-import { getPopCars, newPopCars } from "../Controller/PopCarControl";
-import { getMatchedCars, newMatchedCars } from "../Controller/MatchedCar";
+import { getHome, newHome } from "../Controller/usedHomeControl.js";
+import { getTools, newTools } from "../Controller/usedToolsController.js";
+import { newCities,getCities } from "../Controller/usedCityControl.js";
+import { getPopCars, newPopCars } from "../Controller/PopCarControl.js";
+import { getMatchedCars, newMatchedCars } from "../Controller/MatchedCar.js";
 
 const router = express.Router();
 
